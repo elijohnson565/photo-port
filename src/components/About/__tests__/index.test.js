@@ -15,4 +15,9 @@ describe('About component', () => {
     });
 
     //second test
+    it('matches snapshot', () => {
+        const { asFragment } = render(<About />);
+        // assert value comparison
+        expect(asFragment()).toMatchSnapshot();
+      });
 })
